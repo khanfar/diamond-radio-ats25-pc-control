@@ -1,0 +1,16 @@
+MAP AND COUNTRY FLAG NOTICES
+
+World map imagery
+World map imagery is derived from NASA's Blue Marble: Next Generation.
+Imagery courtesy of NASA Earth Observatory. NASA imagery is not copyrighted.
+
+Country flags
+Country flag images are included solely to identify station and transmitter
+countries. National flag designs remain subject to the applicable rights and
+laws of their respective countries. No ownership of national flag designs is
+claimed by Diamond Radio.
+
+Country and locator data
+Country lookup data and Maidenhead locator calculations are used for reception
+logging, approximate distance and bearing displays. They are not authoritative
+for legal, navigation or safety purposes.
