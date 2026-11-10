@@ -49,6 +49,12 @@ The local address `http://127.0.0.1:8789/pc-control.html` is clickable in the la
 - [Diamond Radio ATS Mini Offline Tool](https://github.com/khanfar/diamond-radio-ats-mini-offline-tool) — offline ATS Mini installation and maintenance.
 - [Diamond Radio ATS Mini firmware](https://github.com/khanfar/diamond-radio-ats-mini) — binary firmware releases and update information.
 
+## Community
+
+- Telegram: https://t.me/+aftBqV_qRMlkZDVi
+- Facebook: https://www.facebook.com/share/g/1EpCchUdzj/
+- YouTube: https://www.youtube.com/@DiamondRadioOfficial
+
 ## Legal and third-party notices
 
 Diamond-specific source code is private. The application is distributed as freeware. Third-party components and data retain their own licenses and copyright notices.
