@@ -5,31 +5,33 @@ Official standalone offline Windows PC Control application for **Diamond Radio A
 - Product and Diamond-specific modifications: **M Khanfar**
 - Distribution: **freeware**; Diamond-specific source code is not distributed
 - Official website: **[diamondradio.web.app/pc-control.html](https://diamondradio.web.app/pc-control.html)**
-- Current version: **1.0.0**
+- Current version: **1.1.0**
 
 ## Download
 
 Open **[Releases](https://github.com/khanfar/diamond-radio-ats25-pc-control/releases/latest)** and choose:
 
-- **DiamondRadio-ATS25Control-v1.0.0-Windows.zip** — recommended package with the EXE, usage information, and legal notices.
+- **DiamondRadio-ATS25Control-v1.1.0-Windows.zip** — recommended package with the EXE, usage information, and legal notices.
 - **DiamondRadio-ATS25Control.exe** — standalone Windows application.
-- **DiamondRadio-ATS25Control-v1.0.0-Licenses.zip** — complete legal notices.
+- **DiamondRadio-ATS25Control-v1.1.0-Licenses.zip** — complete legal notices.
 - **SHA256SUMS.txt** — hashes for checking the release downloads.
 
-No Python installation, account, website access, or internet connection is needed for USB receiver control. The interface, FT8 map, country flags, country data, and EiBi schedule are embedded in the EXE.
+No Python installation, account, website access, or internet connection is needed for USB receiver control. The interface, FT8 map, country flags, country data, EiBi schedule, and NAVTEX timetable are embedded in the EXE.
 
 ## Included features
 
 - FM/HF tuning, modes, bandwidth, tuning step, AGC, ATT, volume, mute, seek, and BFO.
 - Live spectrum/waterfall and the radio-side 3D waterfall control.
 - FT8/FT4/FT2 presets and decode displays.
-- CW and RTTY text displays.
+- CW, RTTY, and NAVTEX live USB text with continuous message viewing.
+- NAVTEX channel presets, exact USB-dial tuning, TXT export, and an offline worldwide NAVTEX schedule with on-air/upcoming filters and QTH distance sorting.
+- Optional PC-audio decoders for NAVTEX, SSTV, WEFAX, and PSK31 when using an audio input.
 - Favorite stations with TXT save/load.
 - Bundled EiBi on-air schedule.
 - Local FT8 world map with station information, country flags, and map styles.
 - A simplified offline interface containing only PC Control and FT8 Map navigation.
 
-**POTA and SOTA spot tabs are online-only services.** Internet availability does not affect USB receiver control, local decodes, favorites, EiBi, or the FT8 map.
+**POTA and SOTA spot tabs are online-only services.** Internet availability does not affect USB receiver control, local decodes, favorites, EiBi, NAVTEX schedules, or the FT8 map.
 
 ## Quick start
 
