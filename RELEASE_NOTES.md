@@ -1,32 +1,41 @@
-# Diamond Radio ATS-25 USB PC Control 1.1.0
+# Diamond Radio ATS-25 USB PC Control 1.1.1
 
-This release brings the expanded Diamond PC Control interface to the standalone offline Windows application, including NAVTEX and additional PC-audio decoders.
+This maintenance release fixes USB connection and ATS Mini NAVTEX issues in the standalone offline Windows application.
 
-## New in 1.1.0
+## Fixed in 1.1.1
 
-- **NAVTEX over radio USB:** channel presets, exact USB-dial tuning, continuous green-box messages, and TXT export. No audio cable is required.
-- **Offline NAVTEX schedule:** worldwide station timetable, scheduled-now and next-nearest filters, frequency filtering, QTH distance sorting, and one-click tuning.
-- **PC Audio Decoder:** NAVTEX, SSTV, WEFAX, and PSK31 through a selected computer audio input.
-- Improved live spectrum/waterfall presentation and decoder workspace.
-- NAVTEX, CW, and RTTY messages continue beyond the initial visible area instead of stopping at the first screen of text.
-- The NAVTEX timetable and all other required local assets are bundled and checked by the application's smoke tests.
+- **CONNECT works again:** the connection-page script error that could prevent the radio chooser from opening has been fixed.
+- **Explicit radio selection:** every new PC Control or standalone FT8 connection lets you choose among connected ATS-25 and ATS Mini radios. A previously authorized Mini is not silently selected.
+- **Independent radio tabs:** FT8/FT4/FT2 decodes, maps, callsign selection, and popup windows remain isolated to their owning radio tab.
+- **ATS Mini NAVTEX restored:** NAVTEX now appears next to RTTY, and its decoder button opens the USB NAVTEX view instead of incorrectly falling back to PC-audio decoding.
+- **Clearer busy-port guidance:** if the selected radio is already occupied, the console asks you to choose a different radio or close the other application.
+- Added build-time checks for page JavaScript, explicit USB selection, per-tab FT8 channels, and ATS Mini NAVTEX availability.
 
-## Existing features retained
+No radio firmware update is required, and this release does not change the firmware protocol.
 
-- Complete ATS-25 USB receiver console with FM/HF tuning, modes, bandwidth, step, AGC, ATT, volume, mute, seek, and BFO.
-- Live spectrum/waterfall and radio-side 3D waterfall control.
-- FT8/FT4/FT2 presets and decodes.
-- Favorite stations and the bundled EiBi schedule.
-- Offline FT8 world map, country data, country flags, and map styles.
-- Chrome or Edge app-mode launcher with a clickable local address.
-- Simplified navigation showing only PC Control and FT8 Map.
+## Included features
 
-No Python installation, account, website, or internet connection is required for USB control and local features. POTA and SOTA live spots require internet.
+- ATS-25 and ATS Mini USB control at 115200 baud.
+- FM/HF tuning, modes, bandwidth, step, AGC, ATT, volume, mute, seek, and BFO.
+- Live spectrum/waterfall, FT8/FT4/FT2 decodes, CW, RTTY, and NAVTEX text.
+- NAVTEX presets, exact USB-dial tuning, TXT export, and an offline worldwide broadcast schedule.
+- Optional PC-audio NAVTEX, SSTV, WEFAX, and PSK31 decoders.
+- Favorites, bundled EiBi on-air schedules, local FT8 maps, country data, and flags.
+- Simplified offline navigation with only PC Control and FT8 Map.
+
+No Python installation, account, website access, or internet connection is required for USB control and local features. POTA and SOTA live spots require internet.
 
 ## Download and use
 
-The **Windows ZIP** is recommended and includes the EXE, read-me, and legal notices. The **standalone EXE** contains the complete application and all local assets.
+The **Windows ZIP** is recommended and includes the EXE, usage information, and legal notices. The **standalone EXE** contains the complete application and all local assets.
 
-Connect the radio by USB, run the application, click **CONNECT** in the console, and select its COM port. For NAVTEX, open **NAVTEX**, choose a preset or enter the USB dial frequency, and click **TUNE NAVTEX**. Use **SAVE LOG** for TXT export and **NAV SCHED** for broadcast times. Keep the launcher open during use. Only one program or browser page can hold the COM port at a time.
+1. Connect the radio with a USB data cable and run the application.
+2. Click **CONNECT** and select the desired ATS-25 or ATS Mini COM port.
+3. On ATS-25, first enable **SETTINGS → PC CONNECTION**. ATS Mini needs no such setting.
+4. For Mini NAVTEX, open **NAVTEX**, select a channel or enter the USB dial frequency, and use **TUNE NAVTEX**.
 
-The package passed frozen-executable self-tests, encrypted-page and bundled-asset checks, local HTTP security and asset tests, native GUI checks, and ZIP-integrity verification. Older releases remain available. This repository contains binary releases and notices only; Diamond-specific source code is not distributed.
+Keep the launcher open during use. Only one program or browser tab may hold a particular radio's COM port. On ATS Mini, use **DISCONNECT** before closing the console; the known final-browser-tab-close restart behavior is unchanged by this release.
+
+The package passed JavaScript parsing, encryption round-trip, frozen-executable, local-server security/asset, native GUI, simulated multi-radio connection, Mini NAVTEX launch, and ZIP-integrity checks. Physical radio behavior remains subject to the connected hardware and firmware version.
+
+Older releases remain available. This repository contains binary releases and notices only; Diamond-specific source code is not distributed.

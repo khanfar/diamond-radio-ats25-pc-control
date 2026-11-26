@@ -1,22 +1,30 @@
 # Diamond Radio ATS-25 USB PC Control
 
-Official standalone offline Windows PC Control application for **Diamond Radio ATS-25-family radios**.
+Official standalone offline Windows PC Control application for **Diamond Radio ATS-25-family radios and ATS Mini**.
 
 - Product and Diamond-specific modifications: **M Khanfar**
 - Distribution: **freeware**; Diamond-specific source code is not distributed
 - Official website: **[diamondradio.web.app/pc-control.html](https://diamondradio.web.app/pc-control.html)**
-- Current version: **1.1.0**
+- Current version: **1.1.1**
 
 ## Download
 
 Open **[Releases](https://github.com/khanfar/diamond-radio-ats25-pc-control/releases/latest)** and choose:
 
-- **DiamondRadio-ATS25Control-v1.1.0-Windows.zip** — recommended package with the EXE, usage information, and legal notices.
+- **DiamondRadio-ATS25Control-v1.1.1-Windows.zip** — recommended package with the EXE, usage information, and legal notices.
 - **DiamondRadio-ATS25Control.exe** — standalone Windows application.
-- **DiamondRadio-ATS25Control-v1.1.0-Licenses.zip** — complete legal notices.
+- **DiamondRadio-ATS25Control-v1.1.1-Licenses.zip** — complete legal notices.
 - **SHA256SUMS.txt** — hashes for checking the release downloads.
 
 No Python installation, account, website access, or internet connection is needed for USB receiver control. The interface, FT8 map, country flags, country data, EiBi schedule, and NAVTEX timetable are embedded in the EXE.
+
+## Version 1.1.1 fixes
+
+- CONNECT now opens the radio selector correctly.
+- Every new connection allows explicit selection among connected ATS-25 and ATS Mini radios.
+- Separate radio tabs keep FT8 decodes, maps, selections, and popup windows independent.
+- ATS Mini NAVTEX buttons and the USB NAVTEX decoder view are available next to RTTY.
+- Busy-port errors clearly ask the user to select a different radio or close the other application.
 
 ## Included features
 
@@ -35,13 +43,14 @@ No Python installation, account, website access, or internet connection is neede
 
 ## Quick start
 
-1. Connect the ATS-25 to the PC using a USB data cable.
+1. Connect an ATS-25 or ATS Mini to the PC using a USB data cable.
 2. Run `DiamondRadio-ATS25Control.exe`.
 3. The console opens in Chrome or Edge app mode.
-4. Click **CONNECT** in the console and select the radio's COM port.
-5. Use **PC Control** for the receiver console or **FT8 Map** for the standalone map page.
+4. Click **CONNECT** and select the desired radio's COM port.
+5. On ATS-25, first enable **SETTINGS → PC CONNECTION**. ATS Mini needs no such setting.
+6. Use **PC Control** for the receiver console or **FT8 Map** for the standalone map page.
 
-Keep the launcher open while using the console. Closing the launcher stops the local service. Only one application or browser page may hold the radio's COM port at a time; close other radio-control tools if the port is busy.
+Keep the launcher open while using the console. Closing the launcher stops the local service. Only one application or browser page may hold a particular radio's COM port at a time; close other radio-control tools if the port is busy. On ATS Mini, use **DISCONNECT** before closing the console; the known final-browser-tab-close restart behavior is unchanged.
 
 The local address `http://127.0.0.1:8789/pc-control.html` is clickable in the launcher. Website and companion-project links are also provided there.
 
